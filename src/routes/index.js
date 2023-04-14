@@ -1,10 +1,16 @@
 //Phai dat cung ten thi moi chay duoc
 const newsRouter = require('./news');
+const meRouter = require('./me');
+const coursesRouter = require('./courses');
 const siteRouter = require('./site');
+
 
 function route(app) {
     app.use('/news', newsRouter);
+    app.use('/me', meRouter);
+    app.use('/courses', coursesRouter);
     app.use('/', siteRouter);
+    
 
     // app.get('/', (req, res) => {
     //     res.render('home');
